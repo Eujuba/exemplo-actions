@@ -12,10 +12,10 @@ public class CalculadoraController {
     public CalculadoraController(CalculadoraService calculadoraService) {
         this.calculadoraService = calculadoraService;
     }
+
+    //publicação da divisão
     @PostMapping("/divisão/{a}/{b}")
     public ResponseEntity<Double>divisao(@PathVariable Double a, Double b){
         return ResponseEntity.ok(calculadoraService.dividir(a, b));
     }
-
 }
-
